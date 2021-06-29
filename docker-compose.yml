@@ -1,4 +1,4 @@
-version: 3.7
+version: "3.7"
 
 services:
   database:
@@ -13,7 +13,7 @@ services:
     networks:
       - clarusnet
     configs:
-      source: intialdatabase
+      - source: intialdatabase
       target: /docker-entrypoint-initdb.d/init.sql
   app-server:
     image: 650670607879.dkr.ecr.us-east-1.amazonaws.com/clarusway-repo/phonebook-app:latest
